@@ -1,0 +1,20 @@
+.Title-div{
+    margin-left:35px;
+}
+.Title-div h2{
+    font-size:30px;
+    margin:27px 0px 0px 0px;
+}
+.filme-lista{
+    margin-left:30px;
+    display:flex;
+    overflow:hidden;
+}
+.filmes img{
+    width:200px;
+    height:100%;
+    transform:scale(0.9);
+}
+.filmes img:hover{
+    transform:scale(1) ;
+}

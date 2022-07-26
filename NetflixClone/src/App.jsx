@@ -7,6 +7,9 @@ import Api from "./Api"
 /*Import Components*/
 import { FilmeLinha } from "./components/FilmeLinha"
 
+/*Importando CSS*/
+import "./App.css"
+
 function App(){
   /*Atributos React*/
   const [filmes, setFilmes] = useState([])
