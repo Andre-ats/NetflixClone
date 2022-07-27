@@ -16,6 +16,10 @@ function App(){
   const [filmes, setFilmes] = useState([])
   const [nomeSerie, setNomeSerie] = useState(null)
   const [imagem, setImagem] = useState(null)
+  const [overview, setOverview] = useState(null)
+  const [season, setSeason] = useState(null)
+  const [datalancamento, setDataLancamento] = useState(null)
+  const [notadofilme, setNotaDoFilmes] = useState(null)
 
   useEffect(()=>{
   async function Carregar(){
@@ -23,13 +27,14 @@ function App(){
     setFilmes(list)
 
     /*Lógica para pegar um filme qualquer*/
-    let originals = list.filter(i=>i.slug === 'originals')
-    let randomNumber = Math.floor(Math.random()*(originals[0].items.results.length - 1))
-    let escolha = originals[0].items.results[randomNumber]
-    let escolhainfo = await Api.getMovieInfo(escolha.id, 'tv')
+    let escolhainfo = await Api.getMovieInfo(66732, 'tv')
 
     setNomeSerie(escolhainfo.name)
     setImagem(escolhainfo.poster_path)
+    setOverview(escolhainfo.overview)
+    setSeason(escolhainfo.number_of_seasons)
+    setDataLancamento(escolhainfo.first_air_date)
+    setNotaDoFilmes(escolhainfo.vote_average)
 
   }
   Carregar()
@@ -40,7 +45,7 @@ function App(){
     <div className="PaginaToda">
       {/*Parte Header*/}
       {/*Parte Recomendado*/}
-      <Recomendado nome={nomeSerie} imagem={`https://image.tmdb.org/t/p/w300${imagem}`}/>
+      <Recomendado nome={nomeSerie} imagem={`https://image.tmdb.org/t/p/${imagem}`} overview={overview} season={season} datalancamento={datalancamento} nota={notadofilme}/>
       {/*Parte lista*/}
       <div className="Lista">
         {filmes.map((item, key) =>(

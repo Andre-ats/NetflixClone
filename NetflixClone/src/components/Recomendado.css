@@ -1,0 +1,25 @@
+.recomendado-inteiro{
+    margin:0px 35px;
+    display:flex;
+    justify-content: space-between;
+}
+.recomendado-inteiro{
+    height:100vh;
+}
+.Parte-Escrita{
+    width:500px;
+    width:inherit;
+    height:inherit;
+    background-color: linear-gradient(to top, #111 10%, transparent 90%);
+}
+.parte-imagem img{
+    width: inherit;
+    height:inherit;
+    background-color: linear-gradient(to top, #111 30%, transparent 70%);
+}
+.tabela-informativa{
+    display:flex;
+}
+.tabela-informativa h3{
+    margin-right:10px;
+}
