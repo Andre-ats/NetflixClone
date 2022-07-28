@@ -1,0 +1,20 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    z-index: 999;
+    top: 0;
+    right:0;
+    left: 0;
+    align-items:center;
+    position:fixed;
+    background-color:transparent;
+    transition:all ease 0.5s;
+}
+header img{
+    margin:0px 10px;
+    cursor:pointer;
+}
+.blackcolor{
+    background-color:#141414;
+
+}

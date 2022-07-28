@@ -62,6 +62,7 @@
     opacity:1;
     transition:all ease 0.2s;
     border:0;
+    cursor: pointer;
 
 }
 .BotãoAssistir{
