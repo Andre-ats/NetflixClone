@@ -14,12 +14,7 @@ import "./App.css"
 function App(){
   /*Atributos React*/
   const [filmes, setFilmes] = useState([])
-  const [nomeSerie, setNomeSerie] = useState(null)
-  const [imagem, setImagem] = useState(null)
-  const [overview, setOverview] = useState(null)
-  const [season, setSeason] = useState(null)
-  const [datalancamento, setDataLancamento] = useState(null)
-  const [notadofilme, setNotaDoFilmes] = useState(null)
+  const [infos, setInfos] = useState(null)
 
   useEffect(()=>{
   async function Carregar(){
@@ -28,13 +23,7 @@ function App(){
 
     /*Lógica para pegar um filme qualquer*/
     let escolhainfo = await Api.getMovieInfo(66732, 'tv')
-
-    setNomeSerie(escolhainfo.name)
-    setImagem(escolhainfo.poster_path)
-    setOverview(escolhainfo.overview)
-    setSeason(escolhainfo.number_of_seasons)
-    setDataLancamento(escolhainfo.first_air_date)
-    setNotaDoFilmes(escolhainfo.vote_average)
+    setInfos(escolhainfo)
 
   }
   Carregar()
@@ -45,7 +34,9 @@ function App(){
     <div className="PaginaToda">
       {/*Parte Header*/}
       {/*Parte Recomendado*/}
-      <Recomendado nome={nomeSerie} imagem={`https://image.tmdb.org/t/p/${imagem}`} overview={overview} season={season} datalancamento={datalancamento} nota={notadofilme}/>
+      {infos && 
+        <Recomendado item={infos}/>
+      }
       {/*Parte lista*/}
       <div className="Lista">
         {filmes.map((item, key) =>(

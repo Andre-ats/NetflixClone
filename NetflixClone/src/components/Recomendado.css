@@ -1,25 +1,77 @@
 .recomendado-inteiro{
-    margin:0px 35px;
-    display:flex;
-    justify-content: space-between;
-}
-.recomendado-inteiro{
     height:100vh;
 }
-.Parte-Escrita{
-    width:500px;
+.Parte-toda-escrita{
     width:inherit;
     height:inherit;
-    background-color: linear-gradient(to top, #111 10%, transparent 90%);
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+.parte-lado-esquerdo{
+    width:inherit;
+    height:inherit;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
 }
 .parte-imagem img{
     width: inherit;
     height:inherit;
-    background-color: linear-gradient(to top, #111 30%, transparent 70%);
+    
 }
 .tabela-informativa{
     display:flex;
+    
 }
 .tabela-informativa h3{
     margin-right:10px;
+}
+.div-lado-esquerdo-escrita{
+    width:30%;
+    margin-left:30px;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:initial;
+    justify-content:center;
+}
+.NotaVerde{
+    color:#46d369;
+}
+.NotaVermelha{
+    color:red;
+}
+.overview{
+    color:#999;
+}
+.NameSerie{
+    font-weight:bold;
+    font-size:60px;
+    margin:10px 0px;
+}
+.Botões-principal{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:50px;
+}
+.BotãoAssistir, .BotãoAdicionarLista{
+    font-weight:bold;
+    font-size:20px;
+    padding:12px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    margin-right:10px;
+    opacity:1;
+    transition:all ease 0.2s;
+    border:0;
+
+}
+.BotãoAssistir{
+    background-color:#fff;
+    color:#000;
+}
+.BotãoAdicionarLista{
+    background-color:#333;
+    color:#fff;
+}
+.BotãoAdicionarLista:hover, .BotãoAssistir:hover{
+    opacity:0.7;
 }
