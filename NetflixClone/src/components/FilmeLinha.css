@@ -9,6 +9,7 @@
     margin-left:30px;
     display:flex;
     overflow:hidden;
+    transition: all ease 0.5s;
 }
 .filmes img{
     width:200px;
@@ -19,4 +20,27 @@
 }
 .filmes img:hover{
     transform:scale(1) ;
+}
+.moverparaesquerda, .moverparadireita{
+    position: absolute;
+    width:40px;
+    height:304px;
+    background-color:rgba(0, 0, 0, 0.6);
+    z-index:99;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    cursor: pointer;
+    opacity:0;
+    transition: all ease 0.5s;
+}
+.moverparaesquerda{
+    left:0;
+}
+.moverparadireita{
+    right: 0;
+}
+.linhatoda:hover .moverparaesquerda, .linhatoda:hover .moverparadireita{
+    opacity:1;
 }
