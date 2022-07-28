@@ -3,9 +3,8 @@ import "./FilmeLinha.css"
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore"
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
-export function FilmeLinha({items, title}){
+export function FilmeLinha({items, title, infos}){
     const [scrollX, setScrollX] = useState(30)
-    const [tela, setTela] = useState(false)
 
     function HandleLeftArrow(){
         let x = scrollX + Math.round(window.innerWidth / 2)
@@ -22,9 +21,7 @@ export function FilmeLinha({items, title}){
         }
         setScrollX(x)
     }
-    function abrirTela(){
-        setTela(true)
-    }
+    
 
     return(
         <Fragment>
@@ -43,7 +40,7 @@ export function FilmeLinha({items, title}){
                 }}>
                     {items.results.length > 0 && items.results.map((item, key) => (
                         <div key={key} className="filmes">
-                            <img onClick={abrirTela} className="imagens-filmes" src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}/>
+                            <img className="imagens-filmes" src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}/>
                         </div>
                     ))}
                 </div>

@@ -57,7 +57,7 @@ function App(){
       {/*Parte lista*/}
       <div className="Lista">
         {filmes.map((item, key) =>(
-          <FilmeLinha key={key} title={item.title} items={item.items}/>
+          <FilmeLinha key={key} title={item.title} items={item.items} infos = {infos}/>
         ))}
       </div>
     </div>
