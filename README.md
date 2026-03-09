@@ -23,7 +23,7 @@ Para simular um catálogo real de filmes e séries, o projeto utiliza a API púb
 API utilizada:
 
 ```
-https://api.themoviedb.org/3
+https://api.themoviedb.org
 ```
 
 ## ⚙️ Funcionalidades
